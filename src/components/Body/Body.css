@@ -1,0 +1,30 @@
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background-color: #f4f4f4;
+  font-family: 'Gilda Display', serif;
+}
+
+.body h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.body button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-family: 'Gilda Display', serif;
+}
+
+.body button:hover {
+  background-color: #555;
+}
+
+  

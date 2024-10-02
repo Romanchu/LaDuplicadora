@@ -1,21 +1,18 @@
-import React from "react";
-import './Header.css';
+import React from 'react';
+import './Header.css'; // Importamos los estilos del header
+import logo from '../../multimedia/Logo.jpg'
 
-function Header() {
+const Header = () => {
   return (
-    <header>
-      <div className="logo">
-        <img src="ruta-de-tu-imagen-del-logo" alt="Logo de la tienda" />
-      </div>
-      <nav>
-        <ul>
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Login</a></li>
-          <li><a href="#">Register</a></li>
-        </ul>
+    <header className="header">
+      <img src= {logo} alt="Logo de La Duplicadora" className="logo" />
+      <nav className="nav">
+        <a href="#inicio">Inicio</a>
+        <a href="#personalizacion">Personalización</a>
+        <a href="#contacto">Contacto</a>
       </nav>
     </header>
   );
-}
+};
 
 export default Header;

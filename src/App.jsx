@@ -1,18 +1,18 @@
-import React from "react";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import ProductList from "./components/ProductList";
+import React from 'react';
+import Header from './components/Header/Header';
+import Body from './components/Body/Body';
+import Footer from './components/Footer/Footer';
 
-function App() {
+
+const App = () => {
   return (
     <div>
       <Header />
-      <main>
-        <ProductList />
-      </main>
+      <Body />
       <Footer />
     </div>
   );
-}
+};
 
 export default App;
+

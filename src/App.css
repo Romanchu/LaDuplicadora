@@ -1,0 +1,39 @@
+/* Estilos generales para toda la aplicación */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Opcional: estilos para enlaces globales */
+a {
+  text-decoration: none;
+  color: inherit; /* Usa el color actual del texto */
+}
+
+a:hover {
+  color: #007BFF; /* Color al pasar el ratón sobre los enlaces */
+}
+
+/* Opcional: estilos para botones globales */
+button {
+  cursor: pointer;
+}
+
+/* Ajustes para asegurar que el Footer esté siempre al final de la página */
+footer {
+  margin-top: auto;
+}

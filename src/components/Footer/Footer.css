@@ -1,12 +1,34 @@
-footer {
-    background-color: #f4f4f4;
-    text-align: center;
-    padding: 20px;
-    margin-top: 20px;
-  }
-  
-  .footer-logo img {
-    height: 40px;
-    margin-top: 10px;
-  }
-  
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  font-family: 'Gilda Display', serif;
+}
+
+.footer-left .logo-footer {
+  width: 70px;
+}
+
+.footer-center p {
+  font-size: 1.2rem;
+}
+
+.footer-right a {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.footer-right a:hover {
+  color: #ccc;
+}
+
+.icon {
+  margin-right: 8px; /* Espacio entre el ícono y el texto */
+  font-size: 1.5rem;  /* Tamaño del ícono */
+}
