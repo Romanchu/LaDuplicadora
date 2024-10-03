@@ -1,0 +1,55 @@
+.personalizacion-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  label {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  select, input {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    width: 200px;
+  }
+  
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #555;
+  }
+  
+  .realizar-pedido {
+    background-color: green;
+  }
+  
+  .realizar-pedido:hover {
+    background-color: darkgreen;
+  }
+  
+  p {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
