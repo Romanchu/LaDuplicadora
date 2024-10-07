@@ -1,122 +1,110 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 import './Registro.css';
-import ReCAPTCHA from 'react-google-recaptcha';
+import ReCAPTCHA from 'react-google-recaptcha'; // Importamos reCAPTCHA
 
-function Registro() {
-  const [usuario, setUsuario] = useState('');
-  const [contrasena, setContrasena] = useState('');
-  const [repetirContrasena, setRepetirContrasena] = useState('');
-  const [correoElectronico, setCorreoElectronico] = useState('');
-  const [registroCompletado, setRegistroCompletado] = useState(false);
-  const [mostrarTic, setMostrarTic] = useState(false);
-  const [captchaValue, setCaptchaValue] = useState(null);
+const Register = () => {
+  const [form, setForm] = useState({
+    username: '',
+    email: '',
+    password: ''
+  });
+  const [captchaValue, setCaptchaValue] = useState(null); // Estado para almacenar el valor del captcha
 
+  // Maneja los cambios en los inputs del formulario
+  const handleChange = (e) => {
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  // Maneja el envío del formulario
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault(); 
 
     if (!captchaValue) {
-      alert('Por favor, verifica que no eres un robot.');
-      return;
-    }
-
-    if (contrasena !== repetirContrasena) {
-      alert('Las contraseñas deben coincidir');
+      alert('Por favor completa el captcha.');
       return;
     }
 
     try {
-      await axios.post('http://localhost:3000/registro', {
-        usuario,
-        contrasena,
-        correoElectronico,
-        captchaValue,
+      const response = await fetch('http://localhost:8080/registro', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ ...form, captchaValue }), // Enviamos los datos junto al valor del captcha
       });
 
-      setRegistroCompletado(true);
-      setMostrarTic(true);
-
-      setTimeout(() => {
-        setMostrarTic(false);
-      }, 2000);
+      if (response.ok) {
+        alert('Usuario registrado exitosamente');
+      } else {
+        alert('Error en el registro');
+      }
     } catch (error) {
-      alert('Error al registrarse');
-      console.log('Error al registrarse', error);
+      console.error('Error al conectar con el backend:', error);
+      alert('Error en la conexión con el servidor');
     }
   };
 
-  const onCaptchaChange = (value) => {
-    setCaptchaValue(value);
-    console.log("Captcha value:", value);
+  // Maneja el cambio en el captcha
+  const handleCaptchaChange = (value) => {
+    setCaptchaValue(value); // Guardamos el valor del captcha cuando se resuelve
   };
 
   return (
     <div className="registro-container">
-      <form onSubmit={handleSubmit} className="formStyle">
-        <h2>Registro</h2>
+      <h2>Registro de Usuarios</h2>
+      <form onSubmit={handleSubmit}>
         <div className="campo">
-          <label htmlFor="usuario">Usuario</label>
+          <label htmlFor="username">Nombre de usuario</label>
           <input
             type="text"
-            id="usuario"
-            value={usuario}
-            onChange={(e) => setUsuario(e.target.value)}
+            id="username"
+            name="username"
+            placeholder="Nombre de usuario"
+            value={form.username}
+            onChange={handleChange}
             required
           />
         </div>
         <div className="campo">
-          <label htmlFor="correoElectronico">Correo Electrónico</label>
+          <label htmlFor="email">Email</label>
           <input
             type="email"
-            id="correoElectronico"
-            value={correoElectronico}
-            onChange={(e) => setCorreoElectronico(e.target.value)}
+            id="email"
+            name="email"
+            placeholder="Email"
+            value={form.email}
+            onChange={handleChange}
             required
           />
         </div>
         <div className="campo">
-          <label htmlFor="contrasena">Contraseña</label>
+          <label htmlFor="password">Contraseña</label>
           <input
             type="password"
-            id="contrasena"
-            value={contrasena}
-            onChange={(e) => setContrasena(e.target.value)}
+            id="password"
+            name="password"
+            placeholder="Contraseña"
+            value={form.password}
+            onChange={handleChange}
             required
           />
         </div>
-        <div className="campo">
-          <label htmlFor="repetirContrasena">Repetir Contraseña</label>
-          <input
-            type="password"
-            id="repetirContrasena"
-            value={repetirContrasena}
-            onChange={(e) => setRepetirContrasena(e.target.value)}
-            required
-          />
-        </div>
+        
+        {/* Componente reCAPTCHA */}
         <div className="captcha-container">
           <ReCAPTCHA
-            sitekey="6Lfw51YqAAAAACpkSTnma9X1ZR2gUtTMhFKq1Vdm"
-            onChange={onCaptchaChange}
+            sitekey="6Lfw51YqAAAAACpkSTnma9X1ZR2gUtTMhFKq1Vdm" // Sustituye con tu clave de sitio
+            onChange={handleCaptchaChange}
           />
         </div>
-        <button className="boton2" type="submit">
-          Enviar
-        </button>
-        {registroCompletado && (
-          <div className="registro-completado">
-            <div className={`tic ${mostrarTic ? 'mostrar' : ''}`}>
-              <div className="brazo1"></div>
-              <div className="brazo2"></div>
-            </div>
-            <p>Registro completado</p>
-          </div>
-        )}
+
+        <button type="submit" className="boton2">Registrarse</button>
       </form>
     </div>
   );
-}
+};
 
-export default Registro;
-
-
+export default Register;

@@ -1,6 +1,6 @@
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Asegura que el logo y la navegación estén separados */
   align-items: center;
   padding: 20px;
   background-color: #333;
@@ -9,6 +9,13 @@
 
 .logo {
   width: 90px;
+}
+
+/* Asegura que los elementos del contenedor .nav estén en fila */
+.nav {
+  display: flex;
+  justify-content: center; /* Opcional: Alinea horizontalmente los enlaces dentro del contenedor */
+  list-style: none; /* Elimina los puntos de la lista */
 }
 
 .nav a {
@@ -21,5 +28,3 @@
 .nav a:hover {
   color: #ccc;
 }
-
-  

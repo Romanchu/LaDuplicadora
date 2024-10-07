@@ -1,6 +1,6 @@
 .footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Distribuye el logo, contacto, y redes sociales uniformemente */
   align-items: center;
   padding: 20px;
   background-color: #333;
@@ -12,23 +12,31 @@
   width: 70px;
 }
 
-.footer-center p {
-  font-size: 1.2rem;
+.footer-center {
+  display: flex;
+  flex-direction: column; /* Coloca los elementos en columna */
+  align-items: center; /* Centra los íconos de correo, teléfono y dirección */
 }
 
-.footer-right a {
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-center a, .footer-right a {
   display: flex;
   align-items: center;
-  margin-left: 20px;
+  margin: 5px 0; /* Espacio entre los íconos */
   color: white;
   text-decoration: none;
 }
 
-.footer-right a:hover {
+.footer-center a:hover, .footer-right a:hover {
   color: #ccc;
 }
 
 .icon {
-  margin-right: 8px; /* Espacio entre el ícono y el texto */
-  font-size: 1.5rem;  /* Tamaño del ícono */
+  margin-right: 8px;
+  font-size: 1.5rem; /* Tamaño del ícono */
 }
