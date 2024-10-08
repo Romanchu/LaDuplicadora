@@ -7,7 +7,7 @@ const Body = () => {
     <main className="body">
       <h1>Bienvenidos a Mayorista de Impresiones</h1>
       <Link to="/personalizacion" className="link-nav">
-          <button className="btn-nav">Personalización</button>
+          <button className="btn-nav">¡Haz tu pedido!</button>
       </Link>
     </main>
   );

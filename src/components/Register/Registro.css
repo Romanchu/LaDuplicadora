@@ -10,12 +10,13 @@
   margin-top: 20px;
   text-align: center;
   position: relative;
+  font-family: 'Gilda Display', serif;
 }
 
 /* Encabezado del formulario */
 h2 {
   text-align: center;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Gilda Display', serif;
   color: #333;
 }
 
@@ -46,7 +47,7 @@ input[type="email"] {
   border-radius: 3px;
   box-sizing: border-box;
   margin-bottom: 10px;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Gilda Display', serif;
   font-size: 16px;
 }
 
@@ -54,19 +55,19 @@ input[type="email"] {
 .boton2 {
   width: 100%;
   padding: 10px;
-  background-color: #4F4557;
+  background-color: #333;
   color: #fff;
   border: none;
   border-radius: 3px;
   cursor: pointer;
   font-size: 16px;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Gilda Display', serif;
   transition: background-color 0.3s ease;
 }
 
 /* Hover del botón */
 .boton2:hover {
-  background-color: #654a67;
+  background-color: #5c595f;
 }
 
 /* Efecto cuando se presiona el botón */

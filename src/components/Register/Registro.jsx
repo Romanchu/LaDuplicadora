@@ -36,10 +36,13 @@ const Register = () => {
         body: JSON.stringify({ ...form, captchaValue }), // Enviamos los datos junto al valor del captcha
       });
 
+      const data = await response.json(); // Procesamos la respuesta del backend
+
       if (response.ok) {
-        alert('Usuario registrado exitosamente');
+        alert(data.message || 'Usuario registrado exitosamente');
       } else {
-        alert('Error en el registro');
+        // Si el correo ya está registrado o ocurre un error, muestra el mensaje recibido
+        alert(data.message || 'Error en el registro');
       }
     } catch (error) {
       console.error('Error al conectar con el backend:', error);
