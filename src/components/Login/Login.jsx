@@ -16,7 +16,6 @@ function Login() {
       return;
     }
 
-    // Enviar los datos al backend para iniciar sesión
     try {
       const response = await fetch('http://localhost:8080/login', {
         method: 'POST',
@@ -32,6 +31,9 @@ function Login() {
         // Guardar el token en localStorage o sessionStorage
         localStorage.setItem('token', data.token);
         setMensaje('Inicio de sesión exitoso');
+
+        // Redirigir a una página de pedidos, perfil, etc., según sea necesario
+        window.location.href = '/personalizacion'; // Cambia '/personalizacion' por la ruta que necesites
       } else {
         setMensaje(data.message);
       }

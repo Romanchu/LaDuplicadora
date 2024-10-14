@@ -7,6 +7,15 @@
     font-family: 'Gilda Display', serif;
   }
   
+  #email {
+    width: 300px; /* Ajusta el tamaño como prefieras */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+
   h1 {
     margin-bottom: 20px;
     font-size: 2rem;
