@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Registro.css';
-import ReCAPTCHA from 'react-google-recaptcha'; // Importamos reCAPTCHA
+import ReCAPTCHA from 'react-google-recaptcha'; 
 
 const Register = () => {
   const [form, setForm] = useState({
@@ -8,9 +8,8 @@ const Register = () => {
     email: '',
     password: ''
   });
-  const [captchaValue, setCaptchaValue] = useState(null); // Estado para almacenar el valor del captcha
+  const [captchaValue, setCaptchaValue] = useState(null); 
 
-  // Maneja los cambios en los inputs del formulario
   const handleChange = (e) => {
     setForm({
       ...form,
@@ -18,7 +17,6 @@ const Register = () => {
     });
   };
 
-  // Maneja el envío del formulario
   const handleSubmit = async (e) => {
     e.preventDefault(); 
 
@@ -33,15 +31,14 @@ const Register = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ ...form, captchaValue }), // Enviamos los datos junto al valor del captcha
+        body: JSON.stringify({ ...form, captchaValue }), 
       });
 
-      const data = await response.json(); // Procesamos la respuesta del backend
+      const data = await response.json(); 
 
       if (response.ok) {
         alert(data.message || 'Usuario registrado exitosamente');
       } else {
-        // Si el correo ya está registrado o ocurre un error, muestra el mensaje recibido
         alert(data.message || 'Error en el registro');
       }
     } catch (error) {
@@ -50,9 +47,8 @@ const Register = () => {
     }
   };
 
-  // Maneja el cambio en el captcha
   const handleCaptchaChange = (value) => {
-    setCaptchaValue(value); // Guardamos el valor del captcha cuando se resuelve
+    setCaptchaValue(value); 
   };
 
   return (
@@ -96,10 +92,10 @@ const Register = () => {
           />
         </div>
         
-        {/* Componente reCAPTCHA */}
+        {}
         <div className="captcha-container">
           <ReCAPTCHA
-            sitekey="6Lfw51YqAAAAACpkSTnma9X1ZR2gUtTMhFKq1Vdm" // Sustituye con tu clave de sitio
+            sitekey="6Lfw51YqAAAAACpkSTnma9X1ZR2gUtTMhFKq1Vdm" 
             onChange={handleCaptchaChange}
           />
         </div>

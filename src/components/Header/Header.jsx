@@ -1,5 +1,5 @@
 import React from 'react';
-import './Header.css'; // Importamos los estilos del header
+import './Header.css'; 
 import logo from '../../multimedia/Logomdi.png'
 import { Link } from 'react-router-dom';
 

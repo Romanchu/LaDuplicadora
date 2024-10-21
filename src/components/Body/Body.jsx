@@ -1,5 +1,5 @@
 import React from 'react';
-import './Body.css'; // Importamos los estilos del body
+import './Body.css'; 
 import { Link } from 'react-router-dom';
 
 const Body = () => {

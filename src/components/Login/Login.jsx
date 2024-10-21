@@ -28,12 +28,11 @@ function Login() {
       const data = await response.json();
 
       if (response.ok) {
-        // Guardar el token en localStorage o sessionStorage
         localStorage.setItem('token', data.token);
         setMensaje('Inicio de sesión exitoso');
 
-        // Redirigir a una página de pedidos, perfil, etc., según sea necesario
-        window.location.href = '/personalizacion'; // Cambia '/personalizacion' por la ruta que necesites
+        
+        window.location.href = '/personalizacion'; 
       } else {
         setMensaje(data.message);
       }

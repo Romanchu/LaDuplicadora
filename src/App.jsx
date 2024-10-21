@@ -11,7 +11,7 @@ import './App.css';
 const App = () => {
   return (
     <Router>
-      {/* Header y Footer están aquí, para que no se dupliquen en cada ruta */}
+      {}
       <Header />
       <Routes>
         <Route path="/" element={<Body />} />
