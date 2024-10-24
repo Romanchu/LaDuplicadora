@@ -1,21 +1,24 @@
 .header {
   display: flex;
-  justify-content: space-between; /* Asegura que el logo y la navegación estén separados */
+  justify-content: space-between; 
   align-items: center;
   padding: 20px;
   background-color: #333;
   font-family: 'Gilda Display', serif;
+  width: 100%;
+  position: relative;
 }
 
 .logo {
-  width: 90px;
+  width: 80px; 
+  z-index: 2; 
 }
 
-/* Asegura que los elementos del contenedor .nav estén en fila */
+
 .nav {
   display: flex;
-  justify-content: center; /* Opcional: Alinea horizontalmente los enlaces dentro del contenedor */
-  list-style: none; /* Elimina los puntos de la lista */
+  justify-content: center;
+  list-style: none;
 }
 
 .nav a {
@@ -27,4 +30,60 @@
 
 .nav a:hover {
   color: #ccc;
+}
+
+
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 3; 
+}
+
+
+@media screen and (max-width: 768px) {
+  
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 120px; 
+    right: 45px;
+    background-color: #333;
+    width: 80%; 
+    text-align: center;
+    z-index: 1; 
+    border: 1px solid black; 
+    border-radius: 5px; 
+    padding: 10px;
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .nav li {
+    padding: 5px 0;
+    width: 100%;
+  }
+
+  .nav a {
+    margin: 0;
+    font-size: 1rem; 
+    padding: 8px;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav a:hover {
+    background-color: #444;
+  }
 }

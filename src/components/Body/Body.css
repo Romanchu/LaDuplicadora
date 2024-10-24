@@ -4,13 +4,19 @@
   justify-content: center;
   align-items: center;
   padding: 40px;
-  background-color: white; /* Un color gris claro más uniforme */
+  background-color: white;
   font-family: 'Gilda Display', serif;
+  max-width: 100%;
+  margin: 0 auto;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
 .body h1 {
   font-size: 2rem;
   margin-bottom: 20px;
+  color: #333;
+  text-align: center;
 }
 
 .body button {
@@ -21,10 +27,32 @@
   border: none;
   cursor: pointer;
   font-family: 'Gilda Display', serif;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
 .body button:hover {
   background-color: #555;
 }
+
+/* Media Queries para pantallas pequeñas */
+@media screen and (max-width: 600px) {
+  .body {
+    padding: 20px;
+    border-radius: 0;
+  }
+
+  .body h1 {
+    font-size: 1.5rem;
+  }
+
+  .body button {
+    font-size: 1rem;
+    padding: 12px;
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
 
   

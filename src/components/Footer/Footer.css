@@ -40,3 +40,29 @@
   margin-right: 8px;
   font-size: 1.5rem; /* Tamaño del ícono */
 }
+
+/* Media query para pantallas móviles */
+@media screen and (max-width: 768px) {
+  .footer {
+    flex-direction: column; /* Los elementos se colocarán en columna en pantallas pequeñas */
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-left, .footer-center, .footer-right {
+    width: 100%; /* Cada sección del footer ocupará todo el ancho disponible */
+    margin-bottom: 20px; /* Espacio entre cada sección */
+  }
+
+  .footer-left .logo-footer {
+    width: 60px; /* Tamaño reducido del logo en móviles */
+  }
+
+  .footer-center a, .footer-right a {
+    justify-content: center; /* Centra el texto y los íconos en dispositivos móviles */
+  }
+
+  .icon {
+    font-size: 1.2rem; /* Reduce el tamaño de los íconos en móviles */
+  }
+}

@@ -1,56 +1,79 @@
 .login-container {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-    text-align: center;
-    font-family: 'Gilda Display', serif;
-  }
-  
-  h2 {
-    text-align: center;
-    font-family: 'Gilda Display', serif;
-  }
-  
-  .campo {
-    margin-bottom: 10px;
-  }
-  
-  label {
-    display: block;
-    font-weight: bold;
-  }
-  
-  input[type="email"],
-  input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-  }
-  
-  .boton3 {
-    width: 100%;
-    padding: 10px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    margin-top: 10px;
-    font-family: 'Gilda Display', serif;
-    transition: background-color 0.3s ease;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  text-align: center;
+  font-family: 'Gilda Display', serif;
+}
+
+h2 {
+  text-align: center;
+  font-family: 'Gilda Display', serif;
+}
+
+.campo {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.boton3 {
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-family: 'Gilda Display', serif;
+  transition: background-color 0.3s ease;
+}
+
+.boton3:active {
+  transform: scale(0.96);
+}
+
+.boton3:hover {
+  background-color: #5c595f;
+}
+
+
+@media screen and (max-width: 768px) {
+  .login-container {
+      max-width: 100%; 
+      padding: 15px; 
+      margin-top: 10px; 
   }
 
-  .boton3:active {
-    transform: scale(0.96);
+  h2 {
+      font-size: 1.5rem; 
   }
-  
-  .boton3:hover {
-    background-color: #5c595f;
+
+  input[type="email"],
+  input[type="password"] {
+      padding: 8px; 
+      font-size: 0.9rem; 
   }
-  
+
+  .boton3 {
+      padding: 8px; 
+      font-size: 0.9rem; 
+  }
+}

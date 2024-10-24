@@ -1,65 +1,110 @@
 .personalizacion-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    background-color: white;
-    font-family: 'Gilda Display', serif;
-  }
-  
-  #email {
-    width: 300px; /* Ajusta el tamaño como prefieras */
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+  font-family: 'Gilda Display', serif;
+  max-width: 100%;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#email {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+}
+
+label {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+select, input {
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 300px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  max-width: 300px;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+.realizar-pedido {
+  background-color: green;
+}
+
+.realizar-pedido:hover {
+  background-color: darkgreen;
+}
+
+p {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+
+img {
+  width: 100%;
+  max-width: 300px;
+  margin: 10px 0;
+}
+
+
+@media screen and (max-width: 600px) {
+  .personalizacion-container {
+    padding: 15px;
+    border-radius: 0;
   }
 
   h1 {
-    margin-bottom: 20px;
-    font-size: 2rem;
-    color: #333;
-  }
-  
-  label {
-    margin-top: 10px;
-    font-size: 1.2rem;
-    color: #333;
-  }
-  
-  select, input {
-    margin-top: 10px;
-    padding: 10px;
-    font-size: 1rem;
-    width: 200px;
-  }
-  
-  button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 1rem;
-    background-color: #333;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #555;
-  }
-  
-  .realizar-pedido {
-    background-color: green;
-  }
-  
-  .realizar-pedido:hover {
-    background-color: darkgreen;
-  }
-  
-  p {
-    margin-top: 20px;
     font-size: 1.5rem;
-    color: #333;
+  }
+
+  label, input, select, textarea, button {
+    font-size: 1rem;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 12px;
   }
   
+  #email, input, select, textarea {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
