@@ -3,7 +3,6 @@ import './Personalizacion.css';
 
 const Personalizacion = () => {
   const [producto, setProducto] = useState('');
-  const [precio, setPrecio] = useState(0);
   const [imagen, setImagen] = useState(null);
   const [email, setEmail] = useState('');
   const [opcionesAdicionales, setOpcionesAdicionales] = useState([]);
@@ -16,144 +15,6 @@ const Personalizacion = () => {
     'Ecosolvente': ['Vinilo b/Blanca (Brillo o matte)', 'Vinilo b/Negra (Brillo o matte)', 'Vinilo transparente', 'Microperforado', 'Lona Front 13oz', 'Lona Backlinght', 'Esmerilado', 'Blackout/Fotográfico', 'Vinilo LG Base Gris', 'Blueback'],
     'Green (Epson)': ['Vinilo b/Blanca (Brillo o matte)', 'Vinilo b/Negra (Brillo o matte)', 'Vinilo transparente', 'Microperforado', 'Lona Front 13oz', 'Lona Backlinght', 'Esmerilado', 'Blackout/Fotográfico', 'Vinilo LG Base Gris', 'Blueback', 'Corrugado plástico'],
     'UV': ['Vinilo b/Blanca (Brillo o matte)', 'Vinilo b/Negra (Brillo o matte)', 'Vinilo transparente', 'Microperforado', 'Lona Front 13oz', 'Lona Backlinght', 'Esmerilado', 'Blackout/Fotográfico', 'Vinilo LG Base Gris', 'Blueback', 'Corrugado plástico', 'ADICIONAL BLANCO UV X CAPA', 'IMPRESIÓN DE MATERIALES RIGIDOS EN UV (NO INCLUYE MATERIAL NI CAPAS DE BLANCO)'],
-  };
-
-  // Función para calcular el precio basado en la cantidad y la opción seleccionada
-  const calcularPrecio = () => {
-    let precioBase = 0;
-
-    // Lógica para el precio basado en el producto y la opción seleccionada
-    switch (producto) {
-      case 'Ecosolvente':
-        switch (opcionSeleccionada) {
-          case 'Vinilo b/Blanca (Brillo o matte)':
-            precioBase = cantidadMetros <= 20 ? 6750 : 6370;
-            break;
-          case 'Vinilo b/Negra (Brillo o matte)':
-            precioBase = cantidadMetros <= 20 ? 7470 : 7040;
-            break;
-          case 'Vinilo transparente':
-            precioBase = cantidadMetros <= 20 ? 6870 : 6480;
-            break;
-          case 'Microperforado':
-            precioBase = cantidadMetros <= 20 ? 9290 : 8760;
-            break;
-          case 'Lona Front 13oz':
-            precioBase = cantidadMetros <= 20 ? 7110 : 6700;
-            break;
-          case 'Lona Backlinght':
-            precioBase = cantidadMetros <= 20 ? 8220 : 7750;
-            break;
-          case 'Esmerilado':
-            precioBase = cantidadMetros <= 20 ? 7740 : 7300;
-            break;
-          case 'Blackout/Fotográfico':
-            precioBase = cantidadMetros <= 20 ? 11270 : 10630;
-            break;
-          case 'Vinilo LG Base Gris':
-            precioBase = cantidadMetros <= 20 ? 10410 : 9820;
-            break;
-          case 'Blueback':
-            precioBase = cantidadMetros <= 20 ? 4480 : 4230;
-            break;
-          default:
-            console.error("Opción no reconocida para Ecosolvente.");
-            break;
-        }
-        break;
-
-      case 'Green (Epson)':
-        switch (opcionSeleccionada) {
-          case 'Vinilo b/Blanca (Brillo o matte)':
-            precioBase = cantidadMetros <= 20 ? 8470 : 7990;
-            break;
-          case 'Vinilo b/Negra (Brillo o matte)':
-            precioBase = cantidadMetros <= 20 ? 9090 : 8580;
-            break;
-          case 'Vinilo transparente':
-            precioBase = cantidadMetros <= 20 ? 8580 : 8090;
-            break;
-          case 'Microperforado':
-            precioBase = cantidadMetros <= 20 ? 11250 : 10610;
-            break;
-          case 'Lona Front 13oz':
-            precioBase = cantidadMetros <= 20 ? 8150 : 7690;
-            break;
-          case 'Lona Backlinght':
-            precioBase = cantidadMetros <= 20 ? 10090 : 9520;
-            break;
-          case 'Esmerilado':
-            precioBase = cantidadMetros <= 20 ? 8300 : 7830;
-            break;
-          case 'Blackout/Fotográfico':
-            precioBase = cantidadMetros <= 20 ? 13230 : 12480;
-            break;
-          case 'Vinilo LG Base Gris':
-            precioBase = cantidadMetros <= 20 ? 11690 : 11030;
-            break;
-          case 'Blueback':
-            precioBase = cantidadMetros <= 20 ? 5610 : 5290;
-            break;
-          case 'Corrugado plástico':
-            precioBase = 8860;
-            break;
-          default:
-            console.error("Opción no reconocida para Green (Epson).");
-            break;
-        }
-        break;
-
-      case 'UV':
-        switch (opcionSeleccionada) {
-          case 'Vinilo b/Blanca (Brillo o matte)':
-            precioBase = cantidadMetros <= 10 ? 7070 : 6430;
-            break;
-          case 'Vinilo b/Negra (Brillo o matte)':
-            precioBase = cantidadMetros <= 10 ? 7740 : 7040;
-            break;
-          case 'Vinilo transparente':
-            precioBase = cantidadMetros <= 10 ? 7180 : 6530;
-            break;
-          case 'Lona Front 13oz':
-            precioBase = cantidadMetros <= 10 ? 7410 : 6740;
-            break;
-          case 'Lona Backlinght':
-            precioBase = cantidadMetros <= 10 ? 8710 : 7920;
-            break;
-          case 'Esmerilado':
-            precioBase = cantidadMetros <= 10 ? 7220 : 6560;
-            break;
-          case 'Blackout/Fotográfico':
-            precioBase = cantidadMetros <= 10 ? 12060 : 10960;
-            break;
-          case 'Vinilo LG Base Gris':
-            precioBase = cantidadMetros <= 10 ? 11800 : 10730;
-            break;
-          case 'Blueback':
-            precioBase = cantidadMetros <= 10 ? 4850 : 4410;
-            break;
-          case 'Corrugado plástico':
-            precioBase = 16570;
-            break;
-          case 'ADICIONAL BLANCO UV X CAPA':
-            precioBase = cantidadMetros <= 10 ? 3240 : 2950;
-            break;
-          case 'IMPRESIÓN DE MATERIALES RIGIDOS EN UV':
-            precioBase = cantidadMetros <= 10 ? 5020 : 4560;
-            break;
-          default:
-            console.error("Opción no reconocida para UV.");
-            break;
-        }
-        break;
-
-      default:
-        console.error("Producto no reconocido.");
-        precioBase = 0;
-    }
-
-    // Calcular el precio total
-    setPrecio(precioBase * cantidadMetros);
   };
 
   const manejarSubidaImagen = (e) => {
@@ -182,7 +43,6 @@ const Personalizacion = () => {
     formData.append('producto', producto);
     formData.append('opcionSeleccionada', opcionSeleccionada); 
     formData.append('cantidadMetros', cantidadMetros);
-    formData.append('precio', precio);
     formData.append('email', email);
     formData.append('imagen', imagen);
     formData.append('detallesAdicionales', detallesAdicionales); // Añade los detalles adicionales
@@ -271,10 +131,6 @@ const Personalizacion = () => {
         rows="4"
       />
 
-      <button onClick={calcularPrecio}>Calcular Precio</button>
-
-      {precio > 0 && <p>Precio estimado: ${precio}</p>}
-
       <label htmlFor="imagen">Sube una imagen:</label>
       <input
         type="file"
@@ -298,3 +154,4 @@ const Personalizacion = () => {
 };
 
 export default Personalizacion;
+

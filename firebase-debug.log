@@ -1,0 +1,174 @@
+[debug] [2024-10-25T13:39:54.611Z] ----------------------------------------------------------------------
+[debug] [2024-10-25T13:39:54.618Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Alumno\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2024-10-25T13:39:54.618Z] CLI Version:   13.23.0
+[debug] [2024-10-25T13:39:54.619Z] Platform:      win32
+[debug] [2024-10-25T13:39:54.619Z] Node Version:  v21.6.1
+[debug] [2024-10-25T13:39:54.620Z] Time:          Fri Oct 25 2024 10:39:54 GMT-0300 (hora estándar de Argentina)
+[debug] [2024-10-25T13:39:54.620Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-10-25T13:39:54.640Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-10-25T13:39:54.641Z] > authorizing via signed-in user (maxi.roman521@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Alumno\Desktop\laduplicadora
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2024-10-25T13:43:49.894Z] Checked if tokens are valid: true, expires at: 1729865174731
+[debug] [2024-10-25T13:43:49.895Z] Checked if tokens are valid: true, expires at: 1729865174731
+[debug] [2024-10-25T13:43:49.899Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2024-10-25T13:43:49.900Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"laduplicadora","name":"laduplicadora"}
+[debug] [2024-10-25T13:43:51.178Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 200
+[debug] [2024-10-25T13:43:51.178Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"name":"operations/cp.6088338350781956596"}
+[debug] [2024-10-25T13:43:51.180Z] Checked if tokens are valid: true, expires at: 1729865174731
+[debug] [2024-10-25T13:43:51.180Z] Checked if tokens are valid: true, expires at: 1729865174731
+[debug] [2024-10-25T13:43:51.181Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.6088338350781956596 [none]
+[debug] [2024-10-25T13:43:52.238Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.6088338350781956596 200
+[debug] [2024-10-25T13:43:52.239Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.6088338350781956596 {"name":"operations/cp.6088338350781956596"}
+[debug] [2024-10-25T13:43:52.750Z] [Project Creation Poller] Retrying task index 0
+[debug] [2024-10-25T13:43:52.752Z] Checked if tokens are valid: true, expires at: 1729865174731
+[debug] [2024-10-25T13:43:52.753Z] Checked if tokens are valid: true, expires at: 1729865174731
+[debug] [2024-10-25T13:43:52.753Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.6088338350781956596 [none]
+[debug] [2024-10-25T13:43:53.205Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.6088338350781956596 200
+[debug] [2024-10-25T13:43:53.205Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.6088338350781956596 {"name":"operations/cp.6088338350781956596"}
+[debug] [2024-10-25T13:43:54.218Z] [Project Creation Poller] Retrying task index 0
+[debug] [2024-10-25T13:43:54.221Z] Checked if tokens are valid: true, expires at: 1729865174731
+[debug] [2024-10-25T13:43:54.221Z] Checked if tokens are valid: true, expires at: 1729865174731
+[debug] [2024-10-25T13:43:54.224Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.6088338350781956596 [none]
+[debug] [2024-10-25T13:43:54.656Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.6088338350781956596 200
+[debug] [2024-10-25T13:43:54.657Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.6088338350781956596 {"name":"operations/cp.6088338350781956596","metadata":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.ProjectCreationStatus","gettable":true,"ready":true},"done":true,"response":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.Project","projectNumber":"377810785019","projectId":"laduplicadora","lifecycleState":"ACTIVE","name":"laduplicadora","createTime":"2024-10-25T13:42:16.164659Z"}}
+[debug] [2024-10-25T13:43:54.669Z] Checked if tokens are valid: true, expires at: 1729865174731
+[debug] [2024-10-25T13:43:54.670Z] Checked if tokens are valid: true, expires at: 1729865174731
+[debug] [2024-10-25T13:43:54.672Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1beta1/projects/laduplicadora:addFirebase [none]
+[debug] [2024-10-25T13:43:55.929Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1beta1/projects/laduplicadora:addFirebase 403
+[debug] [2024-10-25T13:43:55.929Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1beta1/projects/laduplicadora:addFirebase {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2024-10-25T13:43:55.930Z] Request to https://firebase.googleapis.com/v1beta1/projects/laduplicadora:addFirebase had HTTP Error: 403, The caller does not have permission
+[debug] [2024-10-25T13:43:56.196Z] FirebaseError: Request to https://firebase.googleapis.com/v1beta1/projects/laduplicadora:addFirebase had HTTP Error: 403, The caller does not have permission
+    at responseToError (C:\Users\Alumno\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:52:12)
+    at RetryOperation._fn (C:\Users\Alumno\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:312:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to add Firebase to Google Cloud Platform project. See firebase-debug.log for more info.
+[debug] [2024-10-25T13:52:31.257Z] ----------------------------------------------------------------------
+[debug] [2024-10-25T13:52:31.263Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Alumno\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2024-10-25T13:52:31.263Z] CLI Version:   13.23.0
+[debug] [2024-10-25T13:52:31.264Z] Platform:      win32
+[debug] [2024-10-25T13:52:31.264Z] Node Version:  v21.6.1
+[debug] [2024-10-25T13:52:31.265Z] Time:          Fri Oct 25 2024 10:52:31 GMT-0300 (hora estándar de Argentina)
+[debug] [2024-10-25T13:52:31.265Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-10-25T13:52:31.284Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-10-25T13:52:31.285Z] > authorizing via signed-in user (maxi.roman521@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Alumno\Desktop\laduplicadora
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2024-10-25T13:59:12.870Z] Checked if tokens are valid: false, expires at: 1729865174731
+[debug] [2024-10-25T13:59:12.871Z] Checked if tokens are valid: false, expires at: 1729865174731
+[debug] [2024-10-25T13:59:12.871Z] > refreshing access token with scopes: []
+[debug] [2024-10-25T13:59:12.878Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-10-25T13:59:12.878Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-10-25T13:59:13.203Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-10-25T13:59:13.204Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-10-25T13:59:13.221Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2024-10-25T13:59:13.221Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"laduplicadora","name":"laduplicadora"}
+[debug] [2024-10-25T13:59:14.228Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 409
+[debug] [2024-10-25T13:59:14.228Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"error":{"code":409,"message":"Requested entity already exists","status":"ALREADY_EXISTS"}}
+[debug] [2024-10-25T13:59:14.408Z] FirebaseError: Request to https://cloudresourcemanager.googleapis.com/v1/projects had HTTP Error: 409, Requested entity already exists
+    at responseToError (C:\Users\Alumno\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:52:12)
+    at RetryOperation._fn (C:\Users\Alumno\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:312:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to create project because there is already a project with ID laduplicadora. Please try again with a unique project ID.
+[debug] [2024-10-25T14:02:03.239Z] ----------------------------------------------------------------------
+[debug] [2024-10-25T14:02:03.245Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Alumno\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2024-10-25T14:02:03.246Z] CLI Version:   13.23.0
+[debug] [2024-10-25T14:02:03.246Z] Platform:      win32
+[debug] [2024-10-25T14:02:03.246Z] Node Version:  v21.6.1
+[debug] [2024-10-25T14:02:03.247Z] Time:          Fri Oct 25 2024 11:02:03 GMT-0300 (hora estándar de Argentina)
+[debug] [2024-10-25T14:02:03.248Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-10-25T14:02:03.267Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-10-25T14:02:03.269Z] > authorizing via signed-in user (maxi.roman521@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Alumno\Desktop\laduplicadora
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2024-10-25T14:08:23.637Z] Checked if tokens are valid: true, expires at: 1729868352204
+[debug] [2024-10-25T14:08:23.639Z] Checked if tokens are valid: true, expires at: 1729868352204
+[debug] [2024-10-25T14:08:23.645Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2024-10-25T14:08:23.646Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"ladupli","name":"ladupli"}
+[debug] [2024-10-25T14:08:25.112Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 200
+[debug] [2024-10-25T14:08:25.112Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"name":"operations/cp.7882159850703900863"}
+[debug] [2024-10-25T14:08:25.115Z] Checked if tokens are valid: true, expires at: 1729868352204
+[debug] [2024-10-25T14:08:25.115Z] Checked if tokens are valid: true, expires at: 1729868352204
+[debug] [2024-10-25T14:08:25.116Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.7882159850703900863 [none]
+[debug] [2024-10-25T14:08:26.166Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.7882159850703900863 200
+[debug] [2024-10-25T14:08:26.168Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.7882159850703900863 {"name":"operations/cp.7882159850703900863"}
+[debug] [2024-10-25T14:08:26.697Z] [Project Creation Poller] Retrying task index 0
+[debug] [2024-10-25T14:08:26.698Z] Checked if tokens are valid: true, expires at: 1729868352204
+[debug] [2024-10-25T14:08:26.698Z] Checked if tokens are valid: true, expires at: 1729868352204
+[debug] [2024-10-25T14:08:26.699Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.7882159850703900863 [none]
+[debug] [2024-10-25T14:08:27.143Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.7882159850703900863 200
+[debug] [2024-10-25T14:08:27.143Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.7882159850703900863 {"name":"operations/cp.7882159850703900863"}
+[debug] [2024-10-25T14:08:28.149Z] [Project Creation Poller] Retrying task index 0
+[debug] [2024-10-25T14:08:28.150Z] Checked if tokens are valid: true, expires at: 1729868352204
+[debug] [2024-10-25T14:08:28.150Z] Checked if tokens are valid: true, expires at: 1729868352204
+[debug] [2024-10-25T14:08:28.154Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.7882159850703900863 [none]
+[debug] [2024-10-25T14:08:28.588Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.7882159850703900863 200
+[debug] [2024-10-25T14:08:28.589Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.7882159850703900863 {"name":"operations/cp.7882159850703900863","metadata":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.ProjectCreationStatus","gettable":true,"ready":true},"done":true,"response":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.Project","projectNumber":"819949147888","projectId":"ladupli","lifecycleState":"ACTIVE","name":"ladupli","createTime":"2024-10-25T14:06:50.311770Z"}}
+[debug] [2024-10-25T14:08:28.618Z] Checked if tokens are valid: true, expires at: 1729868352204
+[debug] [2024-10-25T14:08:28.619Z] Checked if tokens are valid: true, expires at: 1729868352204
+[debug] [2024-10-25T14:08:28.621Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1beta1/projects/ladupli:addFirebase [none]
+[debug] [2024-10-25T14:08:29.863Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1beta1/projects/ladupli:addFirebase 403
+[debug] [2024-10-25T14:08:29.864Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1beta1/projects/ladupli:addFirebase {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2024-10-25T14:08:29.867Z] Request to https://firebase.googleapis.com/v1beta1/projects/ladupli:addFirebase had HTTP Error: 403, The caller does not have permission
+[debug] [2024-10-25T14:08:30.096Z] FirebaseError: Request to https://firebase.googleapis.com/v1beta1/projects/ladupli:addFirebase had HTTP Error: 403, The caller does not have permission
+    at responseToError (C:\Users\Alumno\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:52:12)
+    at RetryOperation._fn (C:\Users\Alumno\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:312:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to add Firebase to Google Cloud Platform project. See firebase-debug.log for more info.
