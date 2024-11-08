@@ -7,6 +7,9 @@ const Register = () => {
     email: '',
     password: ''
   });
+  const [mensaje, setMensaje] = useState(''); // Estado para manejar mensajes de éxito o error
+
+  const backendUrl = process.env.REACT_APP_BACKEND_URL; // Obtiene la URL del backend desde las variables de entorno
 
   const handleChange = (e) => {
     setForm({
@@ -19,7 +22,7 @@ const Register = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:8080/registro', {
+      const response = await fetch(`${backendUrl}/registro`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -30,13 +33,13 @@ const Register = () => {
       const data = await response.json();
 
       if (response.ok) {
-        alert(data.message || 'Usuario registrado exitosamente');
+        setMensaje(data.message || 'Usuario registrado exitosamente');
       } else {
-        alert(data.message || 'Error en el registro');
+        setMensaje(data.message || 'Error en el registro');
       }
     } catch (error) {
       console.error('Error al conectar con el backend:', error);
-      alert('Error en la conexión con el servidor');
+      setMensaje('Error en la conexión con el servidor');
     }
   };
 
@@ -83,9 +86,11 @@ const Register = () => {
 
         <button type="submit" className="boton2">Registrarse</button>
       </form>
+      {mensaje && <div className="mensaje">{mensaje}</div>}
     </div>
   );
 };
 
 export default Register;
+
 

@@ -10,6 +10,8 @@ const Personalizacion = () => {
   const [cantidadMetros, setCantidadMetros] = useState('');
   const [detallesAdicionales, setDetallesAdicionales] = useState(''); // Cuadro de texto para especificaciones adicionales
 
+  const backendUrl = process.env.REACT_APP_BACKEND_URL; // Obtiene la URL del backend desde las variables de entorno
+
   // Opciones disponibles para cada tipo de producto
   const productosOpciones = {
     'Ecosolvente': ['Vinilo b/Blanca (Brillo o matte)', 'Vinilo b/Negra (Brillo o matte)', 'Vinilo transparente', 'Microperforado', 'Lona Front 13oz', 'Lona Backlinght', 'Esmerilado', 'Blackout/Fotográfico', 'Vinilo LG Base Gris', 'Blueback'],
@@ -50,7 +52,7 @@ const Personalizacion = () => {
     try {
       const token = localStorage.getItem('token'); 
 
-      const response = await fetch('http://localhost:8080/enviar-pedido', {
+      const response = await fetch(`${backendUrl}/enviar-pedido`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}` 

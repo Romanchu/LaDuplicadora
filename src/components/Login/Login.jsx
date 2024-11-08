@@ -1,19 +1,18 @@
 import React, { useState } from 'react';
 import './Login.css';
 
-
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [mensaje, setMensaje] = useState('');
 
+  const backendUrl = process.env.REACT_APP_BACKEND_URL; // Obtiene la URL del backend desde las variables de entorno
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    
 
     try {
-      const response = await fetch('http://localhost:8080/login', {
+      const response = await fetch(`${backendUrl}/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -26,9 +25,7 @@ function Login() {
       if (response.ok) {
         localStorage.setItem('token', data.token);
         setMensaje('Inicio de sesión exitoso');
-
-        
-        window.location.href = '/personalizacion'; 
+        window.location.href = '/personalizacion'; // Redirecciona al área de personalización
       } else {
         setMensaje(data.message);
       }
@@ -37,7 +34,6 @@ function Login() {
       setMensaje('Error en la conexión con el servidor.');
     }
   };
-
 
   return (
     <div className="login-container">
@@ -71,3 +67,4 @@ function Login() {
 }
 
 export default Login;
+
