@@ -1,20 +1,16 @@
 import React, { useState } from 'react';
 import './Login.css';
-import ReCAPTCHA from 'react-google-recaptcha';
+
 
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [mensaje, setMensaje] = useState('');
-  const [captchaValue, setCaptchaValue] = useState(null);
+
 
   const handleLogin = async (e) => {
     e.preventDefault();
     
-    if (!captchaValue) {
-      setMensaje('Por favor, verifica que no eres un robot.');
-      return;
-    }
 
     try {
       const response = await fetch('http://localhost:8080/login', {
@@ -42,9 +38,6 @@ function Login() {
     }
   };
 
-  const onCaptchaChange = (value) => {
-    setCaptchaValue(value);
-  };
 
   return (
     <div className="login-container">
@@ -68,12 +61,6 @@ function Login() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
-          />
-        </div>
-        <div className="captcha-container">
-          <ReCAPTCHA
-            sitekey="6Lfw51YqAAAAACpkSTnma9X1ZR2gUtTMhFKq1Vdm"
-            onChange={onCaptchaChange}
           />
         </div>
         <button className="boton3" type="submit">Iniciar Sesión</button>

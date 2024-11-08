@@ -35,7 +35,6 @@
   background-color: #555;
 }
 
-/* Media Queries para pantallas pequeñas */
 @media screen and (max-width: 600px) {
   .body {
     padding: 20px;

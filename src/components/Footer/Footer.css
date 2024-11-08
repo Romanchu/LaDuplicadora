@@ -1,21 +1,22 @@
 .footer {
   display: flex;
-  justify-content: space-between; /* Distribuye el logo, contacto, y redes sociales uniformemente */
+  justify-content: space-between; 
   align-items: center;
   padding: 20px;
   background-color: #333;
   color: white;
   font-family: 'Gilda Display', serif;
+  width: 100%;
 }
 
 .footer-left .logo-footer {
-  width: 70px;
+  width: 10px;
 }
 
 .footer-center {
   display: flex;
-  flex-direction: column; /* Coloca los elementos en columna */
-  align-items: center; /* Centra los íconos de correo, teléfono y dirección */
+  flex-direction: column; 
+  align-items: center; 
 }
 
 .footer-right {
@@ -27,7 +28,7 @@
 .footer-center a, .footer-right a {
   display: flex;
   align-items: center;
-  margin: 5px 0; /* Espacio entre los íconos */
+  margin: 5px 0; 
   color: white;
   text-decoration: none;
 }
@@ -38,31 +39,31 @@
 
 .icon {
   margin-right: 8px;
-  font-size: 1.5rem; /* Tamaño del ícono */
+  font-size: 1.5rem; 
 }
 
-/* Media query para pantallas móviles */
+
 @media screen and (max-width: 768px) {
   .footer {
-    flex-direction: column; /* Los elementos se colocarán en columna en pantallas pequeñas */
+    flex-direction: column; 
     align-items: center;
     text-align: center;
   }
 
   .footer-left, .footer-center, .footer-right {
-    width: 100%; /* Cada sección del footer ocupará todo el ancho disponible */
-    margin-bottom: 20px; /* Espacio entre cada sección */
+    width: 100%;
+    margin-bottom: 20px;
   }
 
   .footer-left .logo-footer {
-    width: 60px; /* Tamaño reducido del logo en móviles */
+    width: 60px;
   }
 
   .footer-center a, .footer-right a {
-    justify-content: center; /* Centra el texto y los íconos en dispositivos móviles */
+    justify-content: center;
   }
 
   .icon {
-    font-size: 1.2rem; /* Reduce el tamaño de los íconos en móviles */
+    font-size: 1.2rem;
   }
 }
